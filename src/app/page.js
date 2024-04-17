@@ -1,6 +1,3 @@
-
 export default function Home() {
-  return (
-   <div>Incoming...</div>
-  );
+  return <div>Incoming...</div>;
 }
