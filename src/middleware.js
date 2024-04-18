@@ -27,7 +27,5 @@ export async function middleware(req) {
     if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
   }
 
- 
-
   return response;
 }

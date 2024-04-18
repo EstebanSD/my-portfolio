@@ -1,9 +1,10 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-import { Providers } from '@/components';
+import { Header, Providers } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
+const FONT_SOURCE = process.env.FONT_AWESOME_KIT;
 
 export const metadata = {
   title: 'My Portfolio',
@@ -13,9 +14,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script src={FONT_SOURCE} crossorigin="anonymous"></script>
+      </head>
       <body className={inter.className}>
         <Providers>
-          {children}
+          <div className="animated-background relative h-screen w-screen bg-gradient-to-tr from-lime-800 via-slate-800 to-lime-800 p-8">
+            <Header />
+
+            <div className="h-full w-full rounded-md bg-gray-100 px-2 pb-2 pt-14 dark:bg-black">
+              {children}
+            </div>
+          </div>
         </Providers>
       </body>
     </html>

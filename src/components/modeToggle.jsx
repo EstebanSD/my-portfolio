@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 import {
   Button,
@@ -9,16 +9,16 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui"
+} from '@/components/ui';
 
 const THEME_VALUES = [
-    {value: 'light', label: 'Light'},
-    {value: 'dark', label: 'Dark'},
-    {value: 'system', label: 'System'}
-]
+  { value: 'light', label: 'Light' },
+  { value: 'dark', label: 'Dark' },
+  { value: 'system', label: 'System' },
+];
 
 export default function ModeToggle() {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -30,15 +30,14 @@ export default function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        
-      {THEME_VALUES.map(({value,label},idx)=>{
-        return(
+        {THEME_VALUES.map(({ value, label }, idx) => {
+          return (
             <DropdownMenuItem key={idx} onClick={() => setTheme(value)}>
-            {label}
-          </DropdownMenuItem>
-        )
-      })}
+              {label}
+            </DropdownMenuItem>
+          );
+        })}
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
