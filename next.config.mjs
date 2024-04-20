@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig = {
   env: {
     // ------------------------- local -------------------------
@@ -11,6 +17,11 @@ const nextConfig = {
     FONT_AWESOME_KIT: 'https://kit.fontawesome.com/d9be01d6fb.js',
     LINKED_IN_URL: 'https://www.linkedin.com/in/esteban-salvay-dilena',
     GIT_HUB_URL: 'https://github.com/EstebanSD',
+  },
+  webpack(config) {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    config.resolve.alias['@Public'] = path.resolve(__dirname, 'public');
+    return config;
   },
 };
 
