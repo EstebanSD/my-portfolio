@@ -1,4 +1,4 @@
-import { ButtonIcon, ModeToggle } from '.';
+import { ButtonIcon, LanguageToggle, ModeToggle } from '.';
 
 const LINKED_IN_URL = process.env.LINKED_IN_URL;
 const GIT_HUB_URL = process.env.GIT_HUB_URL;
@@ -11,6 +11,8 @@ export default function Header() {
       <ButtonIcon href={GIT_HUB_URL} icon="fa-brands fa-github" />
 
       <ModeToggle />
+
+      <LanguageToggle />
     </div>
   );
 }
