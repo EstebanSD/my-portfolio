@@ -1,6 +1,9 @@
+import { lazy } from 'react';
 import Link from 'next/link';
 
 import { useTranslation } from '../i18n';
+
+const AboutMe = lazy(() => import('./components/aboutMe'));
 
 const TABS = [
   { label: 'about', value: 'about' },
@@ -17,7 +20,7 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
 
   return (
     <div className="flex h-full w-full flex-col border-t pt-4 md:grid md:grid-cols-12">
-      <div className="order-1 h-min md:order-2 md:col-span-3 md:h-full">
+      <div className="order-1 h-min md:order-2 md:col-span-3 md:flex md:h-full md:flex-col md:justify-between">
         <div className="flex h-full w-full items-center justify-around p-2 md:flex-col md:items-start md:justify-start">
           {TABS.map(({ value, label }) => {
             return (
@@ -31,8 +34,20 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
             );
           })}
         </div>
+
+        <div className="hidden md:flex md:items-center md:justify-center md:px-2">
+          <i aria-hidden className="fa-regular fa-copyright" />
+          <span className="ms-2 font-thin">Copyright 2024</span>
+        </div>
       </div>
-      <div className="order-2 h-full rounded-sm border md:order-1 md:col-span-9">Component</div>
+      <div className="order-2 h-full overflow-hidden rounded-sm border md:order-1 md:col-span-9">
+        {tab === TABS[0].value ? <AboutMe lng={lng} /> : <></>}
+      </div>
+
+      <div className="order-3 flex items-center justify-center px-2 md:hidden">
+        <i aria-hidden className="fa-regular fa-copyright" />
+        <span className="ms-2 font-thin">Copyright 2024</span>
+      </div>
     </div>
   );
 }

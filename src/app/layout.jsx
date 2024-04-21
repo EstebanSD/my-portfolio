@@ -1,9 +1,9 @@
-import { Inter } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 import './globals.css';
 
 import { Header, Providers } from '@/components';
 
-const inter = Inter({ subsets: ['latin'] });
+const nunito = Nunito_Sans({ subsets: ['latin'] });
 const FONT_SOURCE = process.env.FONT_AWESOME_KIT;
 
 export const metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <script src={FONT_SOURCE} crossOrigin="anonymous"></script>
       </head>
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <Providers>
           <div className="animated-background relative h-screen w-screen bg-gradient-to-tr from-lime-800 via-slate-800 to-lime-800 p-2 md:p-8">
             <Header />
