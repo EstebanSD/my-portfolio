@@ -12,11 +12,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui';
 import Image from 'next/image';
-import { spain_img, usa_img } from '../../public/img';
+import { spain_flag, usa_flag } from '../../public/img';
 import { useCookies } from 'react-cookie';
 import { i18CookieName, languages } from '@/app/i18n/settings';
 
-const LANGUAGE_IMG = { en: usa_img, es: spain_img };
+const LANGUAGE_IMG = { en: usa_flag, es: spain_flag };
 const FILE_JSON = 'home';
 export default function LanguageToggle() {
   const router = useRouter();
@@ -47,7 +47,7 @@ export default function LanguageToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <Image src={LANGUAGE_IMG[lng]} priority width={20} height={20} alt="flag-img" />
+          <Image src={LANGUAGE_IMG[lng]} priority className="h-4 w-6" alt="flag-img" />
           <span className="sr-only">Toggle language</span>
         </Button>
       </DropdownMenuTrigger>

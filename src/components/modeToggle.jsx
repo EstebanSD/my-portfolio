@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
@@ -10,15 +11,20 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui';
+import { useTranslation } from '@/app/i18n/client';
 
-const THEME_VALUES = [
-  { value: 'light', label: 'Light' },
-  { value: 'dark', label: 'Dark' },
-  { value: 'system', label: 'System' },
-];
-
+const FILE_JSON = 'home';
 export default function ModeToggle() {
+  const lng = usePathname().split('/')[1];
+  const { t } = useTranslation(lng, FILE_JSON);
+
   const { setTheme } = useTheme();
+
+  const THEME_VALUES = [
+    { value: 'light', label: t('light') },
+    { value: 'dark', label: t('dark') },
+    { value: 'system', label: t('system') },
+  ];
 
   return (
     <DropdownMenu>

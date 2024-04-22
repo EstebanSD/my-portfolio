@@ -16,3 +16,5 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
 } from './dropdown-menu';
+export { Badge, badgeVariants } from './badge';
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from './tooltip';

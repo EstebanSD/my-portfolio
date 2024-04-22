@@ -1,2 +1,12 @@
-export { default as spain_img } from './spain.png';
-export { default as usa_img } from './usa.png';
+export { default as spain_flag } from './spain.png';
+export { default as usa_flag } from './usa.png';
+export { default as html_logo } from './html5.svg';
+export { default as css_logo } from './css3.svg';
+export { default as javascript_logo } from './javascript.svg';
+export { default as react_logo } from './react.svg';
+export { default as next_logo } from './next-js.svg';
+export { default as bootstrap5_logo } from './bootstrap5.svg';
+export { default as tailwind_logo } from './tailwind.svg';
+export { default as git_logo } from './git.svg';
+export { default as github_logo } from './github.svg';
+export { default as figma_logo } from './figma.svg';

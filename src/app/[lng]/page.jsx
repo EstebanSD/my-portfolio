@@ -4,12 +4,13 @@ import Link from 'next/link';
 import { useTranslation } from '../i18n';
 
 const AboutMe = lazy(() => import('./components/aboutMe'));
+const Skills = lazy(() => import('./components/skills'));
 
 const TABS = [
   { label: 'about', value: 'about' },
   { label: 'projects', value: 'projects' },
-  { label: 'hard_skills', value: 'hard-skills' },
-  { label: 'soft_skills', value: 'soft-skills' },
+  { label: 'skills', value: 'skills' },
+  { label: 'contact', value: 'contact' },
 ];
 
 const FILE_JSON = 'home';
@@ -41,7 +42,15 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
         </div>
       </div>
       <div className="order-2 h-full overflow-hidden rounded-sm border md:order-1 md:col-span-9">
-        {tab === TABS[0].value ? <AboutMe lng={lng} /> : <></>}
+        {tab === TABS[0].value ? (
+          <AboutMe lng={lng} />
+        ) : tab === TABS[1].value ? (
+          <>Incoming...</>
+        ) : tab === TABS[2].value ? (
+          <Skills lng={lng} />
+        ) : (
+          <>Incoming...</>
+        )}
       </div>
 
       <div className="order-3 flex items-center justify-center px-2 md:hidden">
