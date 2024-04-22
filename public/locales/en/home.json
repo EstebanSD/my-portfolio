@@ -1,9 +1,13 @@
 {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    
     "es": "Spanish",
     "en": "English",
 
     "about": "About me",
     "projects": "Projects",
-    "hard_skills": "Hard skills",
-    "soft_skills": "Soft skills"
+    "skills": "Skills",
+    "contact": "Contact"
 }

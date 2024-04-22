@@ -4,7 +4,7 @@ const FILE_JSON = 'about';
 export default async function AboutMe({ lng }) {
   const { t } = await useTranslation(lng, FILE_JSON);
   return (
-    <div className="h-full w-full overflow-scroll overflow-x-hidden">
+    <div className="h-full w-full overflow-scroll overflow-x-hidden bg-gray-200 dark:bg-gray-900">
       <div className="flex max-h-[10%] w-full items-center justify-center bg-gradient-to-tr from-indigo-700 via-lime-500 to-yellow-500 p-10 lg:max-h-[30%]">
         <div className="w-max">
           <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white px-2 pr-5 text-5xl font-bold text-gray-900 dark:text-white">
