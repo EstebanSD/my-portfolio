@@ -10,3 +10,4 @@ export { default as tailwind_logo } from './tailwind.svg';
 export { default as git_logo } from './git.svg';
 export { default as github_logo } from './github.svg';
 export { default as figma_logo } from './figma.svg';
+export { default as profile_picture } from './profilePicture.jpeg';
