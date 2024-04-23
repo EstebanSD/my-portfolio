@@ -3,7 +3,7 @@ import './globals.css';
 
 import { Header, Providers } from '@/components';
 
-const nunito = Nunito_Sans({ subsets: ['latin'] });
+const nunito = Nunito_Sans({ subsets: ['latin'], display: 'swap' });
 const FONT_SOURCE = process.env.FONT_AWESOME_KIT;
 
 export const metadata = {

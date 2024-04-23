@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { ButtonIcon, LanguageToggle, ModeToggle } from '.';
 
 const LINKED_IN_URL = process.env.LINKED_IN_URL;
@@ -12,7 +13,9 @@ export default function Header() {
 
       <ModeToggle />
 
-      <LanguageToggle />
+      <Suspense>
+        <LanguageToggle />
+      </Suspense>
     </div>
   );
 }

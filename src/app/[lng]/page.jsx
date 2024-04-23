@@ -5,6 +5,7 @@ import { useTranslation } from '../i18n';
 
 const AboutMe = lazy(() => import('./components/aboutMe'));
 const Skills = lazy(() => import('./components/skills'));
+const Contact = lazy(() => import('./components/contact'));
 
 const TABS = [
   { label: 'about', value: 'about' },
@@ -42,14 +43,14 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
         </div>
       </div>
       <div className="order-2 h-full overflow-hidden rounded-sm border md:order-1 md:col-span-9">
-        {tab === TABS[0].value ? (
+        {selectedTab === TABS[0].value ? (
           <AboutMe lng={lng} />
-        ) : tab === TABS[1].value ? (
+        ) : selectedTab === TABS[1].value ? (
           <>Incoming...</>
-        ) : tab === TABS[2].value ? (
+        ) : selectedTab === TABS[2].value ? (
           <Skills lng={lng} />
         ) : (
-          <>Incoming...</>
+          <Contact lng={lng} />
         )}
       </div>
 
