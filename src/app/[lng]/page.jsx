@@ -6,6 +6,7 @@ import { useTranslation } from '../i18n';
 const AboutMe = lazy(() => import('./components/aboutMe'));
 const Skills = lazy(() => import('./components/skills'));
 const Contact = lazy(() => import('./components/contact'));
+const Projects = lazy(() => import('./components/projects'));
 
 const TABS = [
   { label: 'about', value: 'about' },
@@ -39,14 +40,14 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
 
         <div className="hidden md:flex md:items-center md:justify-center md:px-2">
           <i aria-hidden className="fa-regular fa-copyright" />
-          <span className="ms-2 font-thin">Copyright 2024</span>
+          <span className="ms-2 font-thin">2024</span>
         </div>
       </div>
       <div className="order-2 h-full overflow-hidden rounded-sm border md:order-1 md:col-span-9">
         {selectedTab === TABS[0].value ? (
           <AboutMe lng={lng} />
         ) : selectedTab === TABS[1].value ? (
-          <>Incoming...</>
+          <Projects lng={lng} />
         ) : selectedTab === TABS[2].value ? (
           <Skills lng={lng} />
         ) : (
@@ -54,9 +55,9 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
         )}
       </div>
 
-      <div className="order-3 flex items-center justify-center px-2 md:hidden">
+      <div className="order-3 mt-2 flex items-center justify-center px-2 md:hidden">
         <i aria-hidden className="fa-regular fa-copyright" />
-        <span className="ms-2 font-thin">Copyright 2024</span>
+        <span className="ms-2 font-thin">2024</span>
       </div>
     </div>
   );

@@ -72,7 +72,7 @@ export default async function Skills({ lng }) {
 
       <div className="mt-4 w-full">
         <p className="underline">{t('title2')}</p>
-        <div className="mt-2 flex gap-1 md:items-center md:justify-between md:gap-0">
+        <div className="mt-2 flex items-center justify-between gap-1">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger className="rounded-full bg-transparent p-1 dark:bg-gray-100">
