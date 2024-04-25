@@ -14,11 +14,11 @@ const nextConfig = {
     // BASE_URL: '',
     // API_URL: '',
 
-    FONT_AWESOME_KIT: '',
-    LINKED_IN_URL: '',
-    GIT_HUB_URL: '',
-    EMAIL: '',
-    PHONE: '',
+    FONT_AWESOME_KIT: 'https://kit.fontawesome.com/d9be01d6fb.js',
+    LINKED_IN_URL: 'https://www.linkedin.com/in/esteban-salvay-dilena',
+    GIT_HUB_URL: 'https://github.com/EstebanSD',
+    EMAIL: 'estebansalvaydilena@gmail.com',
+    PHONE: '3584904406',
   },
   webpack(config) {
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
