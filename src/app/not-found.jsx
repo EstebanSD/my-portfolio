@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { cookies } from 'next/headers';
+import { SearchX } from 'lucide-react';
 
 import { i18CookieName } from './i18n/settings';
 import { useTranslation } from './i18n';
@@ -11,7 +12,7 @@ export default async function NotFound() {
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-4 rounded-md bg-gray-500">
-      <div className="text-white md:hidden">
+      {/* <div className="text-white md:hidden">
         <i aria-hidden className="fa-solid fa-triangle-exclamation fa-2x" />
       </div>
       <div className="hidden text-white md:block lg:hidden">
@@ -19,7 +20,9 @@ export default async function NotFound() {
       </div>
       <div className="hidden text-white lg:block">
         <i aria-hidden className="fa-solid fa-triangle-exclamation fa-8x" />
-      </div>
+      </div> */}
+
+      <SearchX className="h-20 w-20" />
 
       <div className="flex flex-col items-center justify-center md:flex-row">
         <h2 className="font-bold md:me-2">404</h2>

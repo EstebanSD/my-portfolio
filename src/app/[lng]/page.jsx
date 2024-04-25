@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import Link from 'next/link';
+import { Copyright } from 'lucide-react';
 
 import { useTranslation } from '../i18n';
 
@@ -39,7 +40,8 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
         </div>
 
         <div className="hidden md:flex md:items-center md:justify-center md:px-2">
-          <i aria-hidden className="fa-regular fa-copyright" />
+          {/* <i aria-hidden className="fa-regular fa-copyright" /> */}
+          <Copyright strokeWidth={1} />
           <span className="ms-2 font-thin">2024</span>
         </div>
       </div>
@@ -56,7 +58,8 @@ export default async function Home({ params: { lng }, searchParams: { tab } }) {
       </div>
 
       <div className="order-3 mt-2 flex items-center justify-center px-2 md:hidden">
-        <i aria-hidden className="fa-regular fa-copyright" />
+        {/* <i aria-hidden className="fa-regular fa-copyright" /> */}
+        <Copyright strokeWidth={1} />
         <span className="ms-2 font-thin">2024</span>
       </div>
     </div>

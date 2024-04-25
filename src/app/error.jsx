@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { TriangleAlert } from 'lucide-react';
 
 import { useTranslation } from './i18n/client';
 
@@ -15,7 +16,7 @@ export default function Error({ reset }) {
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-4 rounded-md bg-gray-500">
-      <div className="text-white md:hidden">
+      {/* <div className="text-white md:hidden">
         <i aria-hidden className="fa-solid fa-circle-xmark fa-2x" />
       </div>
       <div className="hidden text-white md:block lg:hidden">
@@ -23,7 +24,9 @@ export default function Error({ reset }) {
       </div>
       <div className="hidden text-white lg:block">
         <i aria-hidden className="fa-solid fa-circle-xmark fa-8x" />
-      </div>
+      </div> */}
+
+      <TriangleAlert className="h-20 w-20" />
 
       <div className="mt-2">{t('title')}</div>
 
