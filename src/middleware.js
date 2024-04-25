@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { i18CookieName, fallbackLng, languages } from './app/i18n/settings';
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|files|sw.js).*)'],
 };
 
 export async function middleware(req) {
@@ -19,7 +19,6 @@ export async function middleware(req) {
   }
 
   const response = NextResponse.next();
-  // response.cookies.set(i18CookieName, lng);
   if (headers.has('referer')) {
     const refererUrl = new URL(headers.get('referer'));
     const lngInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`));

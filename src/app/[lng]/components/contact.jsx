@@ -55,15 +55,15 @@ export default function Contact() {
         </CardContent>
 
         {/* TODO Download CV */}
-        {/* <CardFooter>
+        <CardFooter>
           <p>
             <i aria-hidden className="fa-solid fa-file fa-lg" />
           </p>
 
-          <a href={'/file/text.txt'} download="CV" locale={'false'}>
-            Download FIle
+          <a href={'/files/CV.pdf'} download="ESD_CV" className="ms-2 hover:underline">
+            Download My CV
           </a>
-        </CardFooter> */}
+        </CardFooter>
       </Card>
     </div>
   );

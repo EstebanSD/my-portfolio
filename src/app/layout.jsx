@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script src={FONT_SOURCE} crossOrigin="anonymous"></script>
+        <script src={FONT_SOURCE} crossOrigin="anonymous" />
       </head>
       <body className={nunito.className}>
         <Providers>
