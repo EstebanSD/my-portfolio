@@ -14,9 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      {/* <head>
         <script src={FONT_SOURCE} crossOrigin="anonymous" />
-      </head>
+      </head> */}
       <body className={nunito.className}>
         <Providers>
           <div className="animated-background relative h-screen w-screen bg-gradient-to-tr from-lime-800 via-slate-800 to-lime-800 p-2 md:p-8">
