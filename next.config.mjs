@@ -17,8 +17,8 @@ const nextConfig = {
     FONT_AWESOME_KIT: 'https://kit.fontawesome.com/d9be01d6fb.js',
     LINKED_IN_URL: 'https://www.linkedin.com/in/esteban-salvay-dilena',
     GIT_HUB_URL: 'https://github.com/EstebanSD',
-    // EMAIL: 'estebansalvaydilena@gmail.com',
-    // PHONE: '3584904406',
+    EMAIL: 'estebansalvaydilena@gmail.com',
+    PHONE: '3584904406',
   },
   webpack(config) {
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
